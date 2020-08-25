@@ -1,13 +1,9 @@
 package State;
 
 public class Fast extends State {
-	private State state;
-	
-	public Fast() {
-		this.state = new Slow();
-	}
+	// there should not exist State object as pre-define. State pattern hasn't self-association object
 	public void goNextState(Chain chain) {
-		chain.setSate(state);
+		chain.setSate(new Slow());
 	}
 	
 	public void execute() {

@@ -1,13 +1,9 @@
 package State;
 
 public class Slow extends State {
-	private State state;
 	
-	public Slow() {
-		this.state = new Medium();
-	}
 	public void goNextState(Chain chain) {
-		chain.setSate(state);
+		chain.setSate(new Medium());
 	}
 	
 	public void execute() {
